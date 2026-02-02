@@ -10,7 +10,7 @@ const _DID_INCLUDE_FILE_GET_CALLED = true;  # flag to indicate that this file ha
 # check do we have a Manifest.toml file?
 using Pkg;
 if (isfile(joinpath(_ROOT, "Manifest.toml")) == false) # have manifest file, we are good. Otherwise, we need to instantiate the environment
-    Pkg.add(path="https://github.com/varnerlab/VLDataScienceMachineLearningPackage.jl.git")
+    Pkg.add(url="https://github.com/varnerlab/VLDataScienceMachineLearningPackage.jl.git")
     Pkg.activate("."); Pkg.resolve(); Pkg.instantiate(); Pkg.update();
 end
 
